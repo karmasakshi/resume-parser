@@ -1,0 +1,98 @@
+{
+    "firstName": "Karmasakshi",
+    "lastName": "Goyal",
+    "address": {
+        "city": "Mumbai",
+        "country": "India",
+        "pin": 400055
+    },
+    "dob": "1989-06-10T11:00:00.000Z",
+    "email": "karmasakshi121@gmail.com",
+    "summary": "Web architect. Usability preacher.",
+    "socialProfiles": [
+        {
+            "title": "Facebook",
+            "url": "facebook.com/karmasakshi"
+        },
+        {
+            "title": "LinkedIn",
+            "url": "in.linkedin.com/in/karmasakshi"
+        },
+        {
+            "title": "Twitter",
+            "url": "twitter.com/karmasakshi"
+        }
+    ],
+    "phone": "+919739931869",
+    "employers": [
+        {
+            "organization": "First Notify / First Economy",
+            "title": "Sr. Full-Stack Developer",
+            "start": "2015-09-01T00:00:00.000Z",
+            "end": "2016-04-01T00:00:00.000Z",
+            "projects": [
+                {
+                    "title": "Grabslot",
+                    "description": "Ad platform.",
+                    "stack": ["nodejs", "angularjs", "sailsjs", "mongodb", "mysql", "redis"]
+                },
+                {
+                    "title": "WarCircle",
+                    "description": "Debating platform.",
+                    "stack": ["laravel", "mongodb", "mysql", "angularjs"]
+                }
+            ]
+        },
+        {
+            "organization": "Sportkix",
+            "title": "JavaScript Developer",
+            "start": "2014-10-01T00:00:00.000Z",
+            "end": "2015-09-01T00:00:00.000Z",
+            "projects": [
+                {
+                    "title": "Sportkix",
+                    "description": "Sports news website.",
+                    "stack": ["angularjs", "foundation"]
+                }
+            ]
+        },
+        {
+            "organization": "Done Solutions",
+            "title": "Software Developer",
+            "start": "2013-11-01T00:00:00.000Z",
+            "end": "2014-10-01T00:00:00.000Z",
+            "projects": [
+                {
+                    "title": "iChef",
+                    "description": "Restaurant website.",
+                    "stack": ["angularjs", "bootstrap"]
+                },
+                {
+                    "title": "BOX8",
+                    "description": "Restaurant website.",
+                    "stack": ["angularjs", "bootstrap"]
+                },
+                {
+                    "title": "Natural Ice Creams",
+                    "description": "Restaurant website.",
+                    "stack": ["angularjs", "bootstrap"]
+                }
+            ]
+        }
+    ],
+    "schools": [
+        {
+            "school": "Manipal Institute of Technology",
+            "degree": "M.C.A.",
+            "start": "2010-07-01T00:00:00.000Z",
+            "end": "2013-07-01T00:00:00.000Z"
+        },
+        {
+            "school": "Mumbai University",
+            "degree": "B.Com.",
+            "start": "2007-07-01T00:00:00.000Z",
+            "end": "2010-07-01T00:00:00.000Z"
+        }
+    ],
+    "hobbies": ["music", "travelling", "hiking", "tv", "gymming", "dogs"]
+}

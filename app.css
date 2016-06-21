@@ -1,0 +1,12 @@
+md-content {
+    background-color: #e3e3e3;
+}
+
+.hero {
+    font-size: 60px;
+    margin: 0 0 10px !important;
+}
+
+small {
+    color: grey;
+}

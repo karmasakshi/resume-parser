@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html ng-app="resume-parser" ng-strict-di>
+    <head>
+        <title>Resume Parser</title>
+        <link rel="stylesheet" href="bower_components/angular-material/angular-material.min.css" />
+        <link rel="stylesheet" href="app.css" />
+    </head>
+    <body ng-controller="MainCtrl">
+
+    <md-toolbar class="md-whiteframe-z1">
+        <div class="md-toolbar-tools">
+            <span>Resume Parser</span>
+        </div>
+    </md-toolbar>
+
+    <md-content>
+
+        <div layout="row" layout-padding>
+
+            <md-card flex="75">
+                <md-card-content>
+                    <p class="hero">{{candidate.firstName}}</p>
+                    <p class="hero">{{candidate.lastName}}</p>
+                </md-card-content>
+            </md-card>
+
+            <md-card flex="25">
+                <md-card-content>
+                    <p><strong>Address:</strong>&nbsp;{{candidate.address.city}} - {{candidate.address.pin}}, {{candidate.address.country}}.</p>
+                    <p><strong>Email:</strong>&nbsp;<a ng-href="mailto:{{candidate.email}}">{{candidate.email}}</a></p>
+                    <p><strong>Phone:</strong>&nbsp;<a ng-href="tel:{{candidate.phone}}">{{candidate.phone}}</a></p>
+                    <p><strong>DOB:</strong>&nbsp;{{candidate.dob| date: 'dd MMMM yyyy'}}</p>
+                    <p><strong>Social Profiles:</strong><a ng-repeat="profile in candidate.socialProfiles" ng-href="http://{{profile.url}}" target="_blank"><img style="margin: 0 5px;" ng-src="http://www.google.com/s2/favicons?domain={{profile.url}}" alt="{{profile.title}}"></a></p>
+                </md-card-content>
+            </md-card>
+
+        </div>
+
+        <div layout="row" layout-padding>
+
+            <md-card flex>
+                <md-card-content>
+                    <p><strong>Summary:</strong>&nbsp;{{candidate.summary}}</p>
+                </md-card-content>
+            </md-card>
+
+        </div>
+        
+        <div layout="row" layout-padding layout-align="center start">
+            <h2>Employment</h2>
+        </div>
+
+        <div layout="column" layout-padding>
+
+            <md-card ng-repeat="employer in candidate.employers">
+                <md-card-content>
+                    <p><strong>{{employer.title}} at {{employer.organization}} from {{employer.start| date: 'MMM yyyy'}} to {{employer.end| date: 'MMM yyyy'}}</strong></p>
+                    <hr>
+                    <p ng-repeat="project in employer.projects"><strong>{{project.title}}</strong> - {{project.description}} <small ng-repeat="item in project.stack">#{{item}}&nbsp;</small></p>
+                </md-card-content>
+            </md-card>
+
+        </div>
+        
+        <div layout="row" layout-padding layout-align="center start">
+            <h2>Education</h2>
+        </div>
+
+        <div layout="column" layout-padding>
+
+            <md-card ng-repeat="school in candidate.schools">
+                <md-card-content>
+                    <p><strong>{{school.degree}} at {{school.school}} from {{school.start| date: 'MMM yyyy'}} to {{school.end| date: 'MMM yyyy'}}</strong></p>
+                </md-card-content>
+            </md-card>
+
+        </div>
+        
+        <div layout="row" layout-padding layout-align="center start">
+            <h2>Bio</h2>
+        </div>
+        
+        <div layout="row" layout-padding>
+
+            <md-card flex>
+                <md-card-content>
+                    <p><strong>Hobbies:</strong>&nbsp;<span ng-repeat="hobby in candidate.hobbies">{{hobby}} </span></p>
+                </md-card-content>
+            </md-card>
+
+        </div>
+
+    </md-content>
+
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/angular-animate/angular-animate.js"></script>
+    <script src="bower_components/angular-aria/angular-aria.js"></script>
+    <script src="bower_components/angular-messages/angular-messages.js"></script>
+    <script src="bower_components/angular-material/angular-material.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
